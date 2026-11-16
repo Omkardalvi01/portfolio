@@ -1,0 +1,22 @@
+import AboutMe from "@/components/AboutMe";
+import React from "react";
+
+const Home = () => {
+  return (
+    <main className="relative min-h-screen overflow-hidden bg-[#282828]">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 opacity-20"
+        style={{
+          backgroundImage:
+            "radial-gradient(ellipse 55% 35% at 10% 20%, transparent 38%, #3c3836 39%, transparent 43%), radial-gradient(ellipse 62% 38% at 74% 18%, transparent 37%, #32302f 38%, transparent 43%), radial-gradient(ellipse 55% 32% at 45% 75%, transparent 37%, #3c3836 38%, transparent 44%), radial-gradient(ellipse 50% 35% at 92% 82%, transparent 37%, #32302f 38%, transparent 44%)",
+        }}
+      />
+      <div className="relative mx-auto flex min-h-screen w-full max-w-6xl items-center justify-center">
+        <AboutMe />
+      </div>
+    </main>
+  );
+};
+
+export default Home;
