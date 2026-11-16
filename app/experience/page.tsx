@@ -25,7 +25,7 @@ export default function ExperiencePage() {
             <div className="relative z-10 space-y-4 p-4 sm:p-5">
               <div>
                 <h2 className="text-xl font-bold tracking-tight">AI Intern</h2>
-                <p className="mt-1 text-sm text-[#a89984]">Digikendr Â· Marketing firm</p>
+                <p className="mt-1 text-sm text-[#a89984]">Digikendr· Marketing firm</p>
               </div>
 
               <ul className="list-disc space-y-2 pl-5 text-sm leading-relaxed text-[#bdae93] sm:text-base">
