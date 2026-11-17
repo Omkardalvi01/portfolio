@@ -1,6 +1,10 @@
+import PageBackground from "@/components/PageBackground";
+
 export default function ExperiencePage() {
   return (
-    <main className="min-h-screen bg-[#282828] px-4 py-20 text-[#ebdbb2] md:px-16">
+    <main className="relative min-h-screen overflow-hidden bg-background text-[#ebdbb2]">
+      <PageBackground />
+      <div className="relative z-20 px-4 py-20 md:px-16">
       <div className="mx-auto mb-10 w-full max-w-2xl">
         <div className="space-y-8">
           <div className="flex items-center justify-center gap-2 text-[#fabd2f]">
@@ -12,7 +16,7 @@ export default function ExperiencePage() {
             </h1>
           </div>
 
-          <article className="relative w-full overflow-hidden rounded-lg border-2 border-[#665c54] bg-[#282828] shadow-[3px_3px_0_#665c54] transition-all duration-300 hover:shadow-[5px_5px_0_#665c54] sm:shadow-[4px_4px_0_#665c54] sm:hover:shadow-[6px_6px_0_#665c54]">
+          <article className="relative w-full overflow-hidden rounded-lg border-2 border-[#665c54] bg-background shadow-[3px_3px_0_#665c54] transition-all duration-300 hover:shadow-[5px_5px_0_#665c54] sm:shadow-[4px_4px_0_#665c54] sm:hover:shadow-[6px_6px_0_#665c54]">
             <div
               aria-hidden="true"
               className="pointer-events-none absolute inset-0 opacity-20"
@@ -25,7 +29,7 @@ export default function ExperiencePage() {
             <div className="relative z-10 space-y-4 p-4 sm:p-5">
               <div>
                 <h2 className="text-xl font-bold tracking-tight">AI Intern</h2>
-                <p className="mt-1 text-sm text-[#a89984]">Digikendr· Marketing firm</p>
+                <p className="mt-1 text-sm text-[#a89984]">Digikendr Marketing firm</p>
               </div>
 
               <ul className="list-disc space-y-2 pl-5 text-sm leading-relaxed text-[#bdae93] sm:text-base">
@@ -75,6 +79,7 @@ export default function ExperiencePage() {
             </div>
           </article>
         </div>
+      </div>
       </div>
     </main>
   );

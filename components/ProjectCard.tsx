@@ -44,7 +44,7 @@ export default function ProjectCard({
           />
         )}
       </AnimatePresence>
-      <div className="relative z-20 flex h-full min-h-[18rem] w-full flex-col overflow-hidden rounded-lg border-2 border-[#665c54] bg-[#282828] shadow-[3px_3px_0_#665c54] transition-all duration-300 hover:shadow-[5px_5px_0_#665c54] sm:shadow-[4px_4px_0_#665c54] sm:hover:shadow-[6px_6px_0_#665c54]">
+      <div className="relative z-20 flex h-full min-h-[18rem] w-full flex-col overflow-hidden rounded-lg border-2 border-[#665c54] bg-background shadow-[3px_3px_0_#665c54] transition-all duration-300 hover:shadow-[5px_5px_0_#665c54] sm:shadow-[4px_4px_0_#665c54] sm:hover:shadow-[6px_6px_0_#665c54]">
       {/* Dotted Pattern */}
       <div
         className="absolute inset-0 opacity-20 pointer-events-none"

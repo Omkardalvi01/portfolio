@@ -7,8 +7,9 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background-color: #282828;
-  color: #ebdbb2;
+  background-color: var(--background);
+  color: var(--foreground);
+  color-scheme: dark;
   height: 100%;
   overscroll-behavior: none; /* prevents scroll chaining glow */
   font-family: var(--font-inter), sans-serif;
@@ -85,37 +86,55 @@ h6 {
 }
 
 :root {
+  /* Gruvbox Dark palette */
+  --gruvbox-bg0: #282828;
+  --gruvbox-bg1: #3c3836;
+  --gruvbox-bg2: #504945;
+  --gruvbox-bg3: #665c54;
+  --gruvbox-bg4: #7c6f64;
+  --gruvbox-fg0: #fbf1c7;
+  --gruvbox-fg1: #ebdbb2;
+  --gruvbox-fg2: #d5c4a1;
+  --gruvbox-fg3: #bdae93;
+  --gruvbox-fg4: #a89984;
+  --gruvbox-red: #fb4934;
+  --gruvbox-green: #b8bb26;
+  --gruvbox-yellow: #fabd2f;
+  --gruvbox-blue: #83a598;
+  --gruvbox-purple: #d3869b;
+
+  --page-background: #111111;
   --radius: 0.625rem;
-  --background: #282828;
-  --foreground: #ebdbb2;
-  --card: #3c3836;
-  --card-foreground: #ebdbb2;
-  --popover: #3c3836;
-  --popover-foreground: #ebdbb2;
-  --primary: #fabd2f;
-  --primary-foreground: #282828;
-  --secondary: #504945;
-  --secondary-foreground: #ebdbb2;
-  --muted: #3c3836;
-  --muted-foreground: #a89984;
-  --accent: #504945;
-  --accent-foreground: #fabd2f;
-  --destructive: #fb4934;
-  --border: #665c54;
-  --input: #504945;
+  --background: var(--page-background);
+  --foreground: var(--gruvbox-fg1);
+  --card: var(--gruvbox-bg1);
+  --card-foreground: var(--gruvbox-fg1);
+  --popover: var(--gruvbox-bg1);
+  --popover-foreground: var(--gruvbox-fg1);
+  --primary: var(--gruvbox-yellow);
+  --primary-foreground: var(--page-background);
+  --secondary: var(--gruvbox-bg2);
+  --secondary-foreground: var(--gruvbox-fg1);
+  --muted: var(--gruvbox-bg1);
+  --muted-foreground: var(--gruvbox-fg4);
+  --accent: var(--gruvbox-bg2);
+  --accent-foreground: var(--gruvbox-yellow);
+  --destructive: var(--gruvbox-red);
+  --border: var(--gruvbox-bg3);
+  --input: var(--gruvbox-bg2);
   --ring: #d79921;
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
+  --chart-1: var(--gruvbox-red);
+  --chart-2: var(--gruvbox-green);
+  --chart-3: var(--gruvbox-yellow);
+  --chart-4: var(--gruvbox-blue);
+  --chart-5: var(--gruvbox-purple);
   --sidebar: #32302f;
-  --sidebar-foreground: #ebdbb2;
-  --sidebar-primary: #fabd2f;
-  --sidebar-primary-foreground: #282828;
-  --sidebar-accent: #504945;
-  --sidebar-accent-foreground: #ebdbb2;
-  --sidebar-border: #665c54;
+  --sidebar-foreground: var(--gruvbox-fg1);
+  --sidebar-primary: var(--gruvbox-yellow);
+  --sidebar-primary-foreground: var(--page-background);
+  --sidebar-accent: var(--gruvbox-bg2);
+  --sidebar-accent-foreground: var(--gruvbox-fg1);
+  --sidebar-border: var(--gruvbox-bg3);
   --sidebar-ring: #d79921;
 }
 
@@ -143,5 +162,15 @@ h6 {
   }
   100% {
     transform: translateX(0%);
+  }
+}
+
+.navbar-active-indicator {
+  transition: transform 350ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .navbar-active-indicator {
+    transition-duration: 0ms;
   }
 }

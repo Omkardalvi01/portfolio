@@ -13,6 +13,9 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Omkar | Systems, DevOps & AI Engineer",
+  icons: {
+    icon: "/icon.jpg",
+  },
   description:
     "Portfolio of Omkar, a systems, DevOps, and AI engineer building software across distributed systems, security, and LLM infrastructure.",
   openGraph: {
@@ -30,7 +33,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable}`}>
-      <body className="relative overflow-y-auto bg-[#282828]">
+      <body className="relative overflow-y-auto bg-background">
         <div className="relative min-h-screen">
           <div className="relative">{children}</div>
         </div>

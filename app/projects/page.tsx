@@ -1,11 +1,14 @@
 import React from "react";
 import ProjectCard from "@/components/ProjectCard";
+import PageBackground from "@/components/PageBackground";
 import { projects } from "@/lib/projects";
 
 export default function ProjectsPage() {
   return (
-    <section className="min-h-screen flex flex-col items-start justify-start py-20 bg-[#282828] px-4 md:px-16">
-      <div className="w-full max-w-6xl mx-auto mb-10">
+    <main className="relative min-h-screen overflow-hidden bg-background">
+      <PageBackground />
+      <section className="relative z-20 flex min-h-screen flex-col items-start justify-start bg-transparent px-4 py-20 md:px-16">
+      <div className="mx-auto mb-10 w-full max-w-6xl">
         {/* Projects Section */}
         <div className="text-[#ebdbb2] space-y-8">
           <div className="mx-auto w-full max-w-2xl flex items-center justify-center space-x-2 text-[#fabd2f]">
@@ -22,6 +25,7 @@ export default function ProjectsPage() {
           </div>
         </div>
       </div>
-    </section>
+      </section>
+    </main>
   );
 }
