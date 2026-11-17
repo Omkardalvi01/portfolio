@@ -3,15 +3,18 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { BriefcaseBusiness, Code2, UserRound } from "lucide-react";
+import { useNavbarNavigation } from "@/components/PageNavigationContext";
 
 const navigation = [
   { href: "/", label: "Home", Icon: UserRound },
   { href: "/projects", label: "Projects", Icon: Code2 },
   { href: "/experience", label: "Work Experience", Icon: BriefcaseBusiness },
+  // { href: "/side-quests", label: "Side Quests", Icon: Compass },
 ];
 
 export default function Navbar() {
   const pathname = usePathname();
+  const navigate = useNavbarNavigation();
   const activeIndex = navigation.findIndex(({ href }) => href === pathname);
 
   return (
@@ -49,6 +52,21 @@ export default function Navbar() {
                     href={href}
                     aria-label={label}
                     aria-current={isActive ? "page" : undefined}
+                    onClick={(event) => {
+                      if (
+                        event.defaultPrevented ||
+                        event.button !== 0 ||
+                        event.metaKey ||
+                        event.ctrlKey ||
+                        event.shiftKey ||
+                        event.altKey
+                      ) {
+                        return;
+                      }
+
+                      event.preventDefault();
+                      navigate(href);
+                    }}
                     className={`relative z-10 flex h-10 w-14 items-center justify-center transition-colors duration-200 ${
                       isActive
                         ? "text-[#fabd2f]"

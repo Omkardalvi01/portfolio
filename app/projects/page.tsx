@@ -12,7 +12,6 @@ export default function ProjectsPage() {
         {/* Projects Section */}
         <div className="text-[#ebdbb2] space-y-8">
           <div className="mx-auto w-full max-w-2xl flex items-center justify-center space-x-2 text-[#fabd2f]">
-            <span className="text-4xl font-bold font-mono">&gt;</span>
             <h2 className="text-4xl font-medium tracking-wide text-[#ebdbb2]">
               my projects
             </h2>

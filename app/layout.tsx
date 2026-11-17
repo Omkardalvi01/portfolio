@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
-import Navbar from "@/components/Navbar";
+import PageTransition from "@/components/PageTransition";
 
 // Import Inter for use throughout the entire site
 const inter = Inter({
@@ -34,10 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable}`}>
       <body className="relative overflow-y-auto bg-background">
-        <div className="relative min-h-screen">
-          <div className="relative">{children}</div>
-        </div>
-        <Navbar />
+        <PageTransition>{children}</PageTransition>
         <Analytics />
       </body>
     </html>

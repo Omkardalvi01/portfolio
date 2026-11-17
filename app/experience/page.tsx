@@ -8,9 +8,6 @@ export default function ExperiencePage() {
       <div className="mx-auto mb-10 w-full max-w-2xl">
         <div className="space-y-8">
           <div className="flex items-center justify-center gap-2 text-[#fabd2f]">
-            <span aria-hidden="true" className="font-mono text-4xl font-bold">
-              &gt;
-            </span>
             <h1 className="text-3xl font-medium tracking-wide text-[#ebdbb2] sm:text-4xl">
               work experience
             </h1>
