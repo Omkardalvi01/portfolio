@@ -118,7 +118,7 @@ export default function PageTransition({
   return (
     <PageNavigationContext.Provider value={navigateFromNavbar}>
       <div className="relative min-h-screen" data-ripple-active={Boolean(ripple)}>
-        <div key={pathname}>{children}</div>
+        <div key={pathname} className="pb-56 sm:pb-0">{children}</div>
         <Navbar />
         {ripple && ripplePhase && (
           <div
